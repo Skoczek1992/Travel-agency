@@ -112,6 +112,11 @@ describe('Component OrderOption', () => {
             const div = renderedSubcomponent.find('.icon');
             expect(div).toBeTruthy();
           });
+          it('should run setOrderOption function on click', () => {
+            renderedSubcomponent.find('.icon .icon').at(2).simulate('click');
+            expect(mockSetOrderOption).toBeCalledTimes(1);
+            expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });
+          });
           break;
         }
         case 'checkboxes': {
