@@ -40,6 +40,7 @@ const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
     });
 };
 
+
 const OrderForm =  (props) => (
   <Row>
     {Pricing.map((option) => (
@@ -60,9 +61,9 @@ OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.object,
   setOrderOption: PropTypes.func,
-  tripName: PropTypes.string.isRequired,
-  tripId: PropTypes.string.isRequired,
-  countryCode: PropTypes.string.isRequired,
+  tripName: PropTypes.string,
+  tripId: PropTypes.string,
+  countryCode: PropTypes.string,
 };
 
 export default OrderForm;
