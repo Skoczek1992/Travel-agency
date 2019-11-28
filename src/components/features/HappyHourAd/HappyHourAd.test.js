@@ -6,7 +6,7 @@ import HappyHourAd from './HappyHourAd';
 
 const select = {
   title: '.title',
-  promoDescription: '.promoDescription',
+  countdown: '.countdown',
 };
 
 const mockProps = {

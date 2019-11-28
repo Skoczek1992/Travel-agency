@@ -8,7 +8,7 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
   <select
     className={styles.dropdown}
     value={currentValue}
-    onChange={event => setOptionValue(event.currentTarget.value.id)}
+    onChange={event => setOptionValue(event.currentTarget.value)}
   >
     {required ? '' : (
       <option key='null' value=''>---</option>
@@ -22,7 +22,7 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
 OrderOptionDropdown.propTypes = {
   name: PropTypes.string,
   values: PropTypes.array,
-  required: PropTypes.string,
+  required: PropTypes.bool,
   currentValue: PropTypes.string,
   setOptionValue: PropTypes.func,
 };

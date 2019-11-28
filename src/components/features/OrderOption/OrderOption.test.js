@@ -113,7 +113,7 @@ describe('Component OrderOption', () => {
             expect(div).toBeTruthy();
           });
           it('should run setOrderOption function on click', () => {
-            renderedSubcomponent.find('.icon .icon').at(2).simulate('click');
+            renderedSubcomponent.find('.icon .icon').at(1).simulate('click');
             expect(mockSetOrderOption).toBeCalledTimes(1);
             expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });
           });
@@ -149,7 +149,7 @@ describe('Component OrderOption', () => {
             });
             expect(mockSetOrderOption).toBeCalledTimes(1);
             expect(mockSetOrderOption).toBeCalledWith({
-              [mockProps.id]: testValue,
+              [mockProps.id]: testValueNumber,
             });
           });
           break;
